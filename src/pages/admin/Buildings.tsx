@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { ROUTES } from '../../utils/constants';
 
 const Buildings = () => {
-  const [buildings, setBuildings] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { UserRole } from '../types';
 import { ROUTES } from '../utils/constants';
-import api from '../services/api';
 
 const Login = () => {
   const [email, setEmail] = useState('');

@@ -1,5 +1,4 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import api from '../services/api';
 import { User, LoginCredentials, AuthContextType, UserRole, UserStatus } from '../types';
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -19,7 +18,7 @@ interface AuthProviderProps {
 // TEMPORARY: Mock user for development without backend
 const mockUser: User = {
   id: '1',
-  email: 'admin@phuniversity.edu',
+  email: 'admin@admin.edu',
   role: UserRole.ADMIN,
   status: UserStatus.ACTIVE,
 };
@@ -34,13 +33,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     setLoading(false);
   }, []);
 
-  const checkAuth = async () => {
-    // TEMPORARY: Disabled - no API call
-    setUser(mockUser);
-    setLoading(false);
-  };
-
-  const login = async (credentials: LoginCredentials) => {
+  const login = async (_credentials: LoginCredentials) => {
     // TEMPORARY: Skip API call, just set mock user
     setUser(mockUser);
   };

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { ROUTES } from '../../utils/constants';
 
 const Sections = () => {
-  const [sections, setSections] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

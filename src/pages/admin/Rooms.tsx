@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { ROUTES } from '../../utils/constants';
 
 const Rooms = () => {
-  const [rooms, setRooms] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

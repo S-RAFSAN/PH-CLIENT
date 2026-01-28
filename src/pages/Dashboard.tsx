@@ -108,7 +108,7 @@ const Dashboard = () => {
       role: user.role || UserRole.ADMIN,
     } : {
       id: '1',
-      email: 'admin@phuniversity.edu',
+      email: 'admin@admin.edu',
       role: UserRole.ADMIN,
     };
     
@@ -235,7 +235,7 @@ const Dashboard = () => {
 
   const currentUser = user || {
     id: '1',
-    email: 'admin@phuniversity.edu',
+    email: 'admin@admin.edu',
     role: UserRole.ADMIN,
   };
 
@@ -264,7 +264,7 @@ const Dashboard = () => {
                   </span>
                 </div>
                 <div className="text-sm">
-                  <p className="font-semibold text-gray-100">{currentUser.email || 'admin@phuniversity.edu'}</p>
+                  <p className="font-semibold text-gray-100">{currentUser.email || 'admin@admin.edu'}</p>
                   <p className="text-xs text-gray-400">{currentUser.role || 'ADMIN'}</p>
                 </div>
               </div>
